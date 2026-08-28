@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Participa en las actividades de Conecta Cultura">
+  <title>Participar| Conecta Cultura</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+  <header class="cabecera-sitio">
+    <a class="marca" href="index.html">Conecta Cultura</a>
+    <nav aria-label="Navegación principal">
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="agenda.html">Agenda</a></li>
+        <li><a href="participar.html" aria-current="page">Participar</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+  <header class="encabezado-pagina">
+    <p class="etiqueta">Súmate a la comunidad</p>
+    <h1>Formulario de participación</h1>
+    <p>Completa los datos para manifestar interés en una actividad.</p>
+  </header>
+
+  <form class="formulario" action="confirmacion.html" method="get">
+    <fieldset>
+      <legend>Datos de contacto</legend>
+
+      <label for="nombre">Nombre completo</label>
+      <input id="nombre" name="nombre" type="text"
+             autocomplete="name" minlength="3" maxlength="80" required>
+
+      <label for="correo">Correo electrónico</label>
+      <input id="correo" name="correo" type="email"
+             autocomplete="email" required>
+
+      <label for="telefono">Teléfono chileno</label>
+      <input id="telefono" name="telefono" type="tel"
+             autocomplete="tel" placeholder="912345678"
+             pattern="[0-9]{9}" title="Ingresa 9 dígitos" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferencias</legend>
+
+      <label for="actividad">Actividad de interés</label>
+      <select id="actividad" name="actividad" required>
+        <option value="">Selecciona una actividad</option>
+        <option value="fotografia">Fotografía urbana</option>
+        <option value="huerto">Huerto comunitario</option>
+        <option value="programacion">Programación creativa</option>
+      </select>
+
+      <p>Modalidad preferida</p>
+      <label><input type="radio" name="modalidad"
+                    value="presencial" required> Presencial</label>
+      <label><input type="radio" name="modalidad"
+                    value="remota"> Remota</label>
+
+      <label for="motivacion">¿Por qué quieres participar?</label>
+      <textarea id="motivacion" name="motivacion"
+                rows="5" minlength="20" maxlength="500" required></textarea>
+    </fieldset>
+
+    <label>
+      <input type="checkbox" name="acepta_condiciones" required>
+      Confirmo que los datos son de prueba y acepto las condiciones.
+    </label>
+
+    <button type="submit">Enviar solicitud de prueba</button>
+  </form>
+</main>
+
+
+
+  <footer class="pie-sitio">
+    <p><strong>Conecta Cultura</strong></p>
+    <address>Contacto: <a href="mailto:hola@conectacultura.cl">hola@conectacultura.cl</a></address>
+    <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
