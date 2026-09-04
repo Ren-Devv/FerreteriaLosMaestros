@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bienvenido a Ferreteria Los Maestros">
+  <title>Inicio | Ferreteria Los Maestros</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+
+  <header class="cabecera-sitio">
+    <div class="contenedor">
+      <div class="barra-superior">
+        <a class="marca" href="index.html">
+          <strong>Ferreteria Los Maestros</strong>
+          <span>Materiales - herramientas - despacho a obra</span>
+        </a>
+        <button class="boton-menu" id="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir o cerrar menú principal">
+          Menu
+        </button>
+      </div>
+
+      <nav class="menu-principal" id="menu-principal" aria-label="Navegacion principal">
+        <ul class="menu">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li class="menu-item-desplegable">
+            <button class="menu-desplegable-boton" type="button" id="boton-categorias" aria-expanded="false" aria-controls="submenu-categorias">
+              Categorias
+            </button>
+            <ul class="submenu" id="submenu-categorias">
+              <li><a href="catalogo.html?cat=herramientas">Herramientas</a></li>
+              <li><a href="catalogo.html?cat=construccion">Construccion</a></li>
+              <li><a href="catalogo.html?cat=gasfiteria">Gasfiteria</a></li>
+              <li><a href="catalogo.html?cat=electricidad">Electricidad</a></li>
+            </ul>
+          </li>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="contratistas.html">Contratistas</a></li>
+          <li><a href="despacho.html">Despacho</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div class="acciones-cliente">
+          <a class="btn btn-secundario" href="cuenta.html">Mi cuenta</a>
+          <a class="btn btn-primario" href="cuenta-corriente.html">Cuenta corriente</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+  <section class="encabezado-catalogo">
+    <div class="contenedor">
+      <h1>Catálogo de productos</h1>
+      <p>Filtra por categoría para encontrar lo que necesitas.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="titulo-catalogo">
+    <div class="contenedor">
+      <div class="tabs-categorias" role="tablist" aria-label="Filtrar por categoría">
+        <button class="tab activo" role="tab" aria-selected="true" data-categoria="">Todas</button>
+        <button class="tab" role="tab" aria-selected="false" data-categoria="herramientas">Herramientas</button>
+        <button class="tab" role="tab" aria-selected="false" data-categoria="construccion">Construcción</button>
+        <button class="tab" role="tab" aria-selected="false" data-categoria="gasfiteria">Gasfitería</button>
+        <button class="tab" role="tab" aria-selected="false" data-categoria="electricidad">Electricidad</button>
+      </div>
+
+      <div class="grilla-productos" id="grilla-productos" aria-live="polite">
+        <!-- Se llena por JS -->
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer class="pie-sitio">
+    <div class="contenedor pie-interior">
+      <div>
+        <h4>Navegacion</h4>
+        <ul>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="contratistas.html">Contratistas</a></li>
+          <li><a href="despacho.html">Despacho</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="contacto.html">Escribenos</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pie-legal">Proyecto academico · Desarrollo FullStack II</p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>

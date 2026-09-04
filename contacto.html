@@ -3,89 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Participa en las actividades de Conecta Cultura">
-  <title>Participar| Conecta Cultura</title>
+  <meta name="description" content="Contáctanos para cotizaciones, despacho o consultas en Ferreteria Los Maestros">
+  <title>Contacto | Ferreteria Los Maestros</title>
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+
   <header class="cabecera-sitio">
-    <a class="marca" href="index.html">Conecta Cultura</a>
-    <nav aria-label="Navegación principal">
-      <ul class="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="agenda.html">Agenda</a></li>
-        <li><a href="participar.html" aria-current="page">Participar</a></li>
-        
-      </ul>
-    </nav>
+    <div class="contenedor">
+      <div class="barra-superior">
+        <a class="marca" href="index.html">
+          <strong>Ferreteria Los Maestros</strong>
+          <span>Materiales - herramientas - despacho a obra</span>
+        </a>
+        <button class="boton-menu" id="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir o cerrar menú principal">
+          Menu
+        </button>
+      </div>
+
+      <nav class="menu-principal" id="menu-principal" aria-label="Navegacion principal">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="menu-item-desplegable">
+            <button class="menu-desplegable-boton" type="button" id="boton-categorias" aria-expanded="false" aria-controls="submenu-categorias">
+              Categorias
+            </button>
+            <ul class="submenu" id="submenu-categorias">
+              <li><a href="catalogo.html?cat=herramientas">Herramientas</a></li>
+              <li><a href="catalogo.html?cat=construccion">Construccion</a></li>
+              <li><a href="catalogo.html?cat=gasfiteria">Gasfiteria</a></li>
+              <li><a href="catalogo.html?cat=electricidad">Electricidad</a></li>
+            </ul>
+          </li>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="contratistas.html">Contratistas</a></li>
+          <li><a href="despacho.html">Despacho</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+        <div class="acciones-cliente">
+          <a class="btn btn-secundario" href="cuenta.html">Mi cuenta</a>
+          <a class="btn btn-primario" href="cuenta-corriente.html">Cuenta corriente</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main id="contenido-principal">
-  <header class="encabezado-pagina">
-    <p class="etiqueta">Súmate a la comunidad</p>
-    <h1>Formulario de participación</h1>
-    <p>Completa los datos para manifestar interés en una actividad.</p>
-  </header>
+    <section aria-labelledby="titulo-contacto">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <h2 id="titulo-contacto">Contáctanos</h2>
+          <p>Escríbenos para cotizaciones, despacho a obra o consultas sobre stock.</p>
+        </div>
 
-  <form class="formulario" action="confirmacion.html" method="get">
-    <fieldset>
-      <legend>Datos de contacto</legend>
+        <form class="formulario" action="confirmacion.html" method="get">
+          <fieldset>
+            <legend>Datos de contacto</legend>
 
-      <label for="nombre">Nombre completo</label>
-      <input id="nombre" name="nombre" type="text"
-             autocomplete="name" minlength="3" maxlength="80" required>
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text"
+                   autocomplete="name" minlength="3" maxlength="80" required>
 
-      <label for="correo">Correo electrónico</label>
-      <input id="correo" name="correo" type="email"
-             autocomplete="email" required>
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" name="correo" type="email"
+                   autocomplete="email" required>
 
-      <label for="telefono">Teléfono chileno</label>
-      <input id="telefono" name="telefono" type="tel"
-             autocomplete="tel" placeholder="912345678"
-             pattern="[0-9]{9}" title="Ingresa 9 dígitos" required>
-    </fieldset>
+            <label for="telefono">Teléfono chileno</label>
+            <input id="telefono" name="telefono" type="tel"
+                   autocomplete="tel" placeholder="912345678"
+                   pattern="[0-9]{9}" title="Ingresa 9 dígitos" required>
+          </fieldset>
 
-    <fieldset>
-      <legend>Preferencias</legend>
+          <fieldset>
+            <legend>Detalle de tu consulta</legend>
 
-      <label for="actividad">Actividad de interés</label>
-      <select id="actividad" name="actividad" required>
-        <option value="">Selecciona una actividad</option>
-        <option value="fotografia">Fotografía urbana</option>
-        <option value="huerto">Huerto comunitario</option>
-        <option value="programacion">Programación creativa</option>
-      </select>
+            <label for="categoria-interes">Categoría de interés</label>
+            <select id="categoria-interes" name="categoria_interes" required>
+              <option value="">Selecciona una categoría</option>
+              <option value="herramientas">Herramientas</option>
+              <option value="construccion">Construccion</option>
+              <option value="gasfiteria">Gasfiteria</option>
+              <option value="electricidad">Electricidad</option>
+              <option value="otro">Otro / no estoy seguro</option>
+            </select>
 
-      <p>Modalidad preferida</p>
-      <label><input type="radio" name="modalidad"
-                    value="presencial" required> Presencial</label>
-      <label><input type="radio" name="modalidad"
-                    value="remota"> Remota</label>
+            <p>Tipo de cliente</p>
+            <label><input type="radio" name="tipo_cliente"
+                          value="particular" required> Particular</label>
+            <label><input type="radio" name="tipo_cliente"
+                          value="contratista"> Contratista</label>
 
-      <label for="motivacion">¿Por qué quieres participar?</label>
-      <textarea id="motivacion" name="motivacion"
-                rows="5" minlength="20" maxlength="500" required></textarea>
-    </fieldset>
+            <label for="mensaje">Cuéntanos qué necesitas</label>
+            <textarea id="mensaje" name="mensaje"
+                      rows="5" minlength="20" maxlength="500" required></textarea>
+          </fieldset>
 
-    <label>
-      <input type="checkbox" name="acepta_condiciones" required>
-      Confirmo que los datos son de prueba y acepto las condiciones.
-    </label>
+          <label>
+            <input type="checkbox" name="acepta_condiciones" required>
+            Confirmo que los datos son de prueba y acepto las condiciones.
+          </label>
 
-    <button type="submit">Enviar solicitud de prueba</button>
-  </form>
-</main>
-
-
+          <button type="submit">Enviar consulta</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer class="pie-sitio">
-    <p><strong>Conecta Cultura</strong></p>
-    <address>Contacto: <a href="mailto:hola@conectacultura.cl">hola@conectacultura.cl</a></address>
-    <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
+    <div class="contenedor pie-interior">
+      <div>
+        <h4>Ferreteria Los Maestros</h4>
+        <p>Materiales de construccion, herramientas y gasfiteria para particulares y contratistas.</p>
+      </div>
+      <div>
+        <h4>Navegacion</h4>
+        <ul>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="contratistas.html">Contratistas</a></li>
+          <li><a href="despacho.html">Despacho</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="contacto.html">Escribenos</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pie-legal">Proyecto academico · Desarrollo FullStack II</p>
   </footer>
+
   <script src="assets/js/app.js"></script>
+  <script src="assets/js/productos.js"></script>
+  <script src="assets/js/carrito.js"></script>
+  <script src="assets/js/catalogo.js"></script>
 </body>
 </html>

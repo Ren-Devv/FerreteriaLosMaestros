@@ -4,160 +4,174 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Bienvenido a Ferreteria Los Maestros">
-  <title>Inicio | Conecta Cultura</title>
+  <title>Inicio | Ferreteria Los Maestros</title>
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
- 
-<header class="cabecera-sitio">
-  <div class="contenedor">
-    <div class="barra-superior">
-      <a class="marca" href="index.html">
-        <strong>Ferreteria Los Maestros</strong>
-        <span>Materiales - herramientas - despacho a obra</span>
-      </a>
-      <button class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
-        Menu
-      </button>
-    </div>
-    <nav class="menu-principal" id="menu-principal" aria-label="Navegacion principal">
-      <ul class="menu">
-        <li><a href="index.html" aria-current="page">Inicio</a></li>
-        <li><a href="catalogo.html">Catalogo</a></li>
-        <li><a href="contratistas.html">Contratistas</a></li>
-        <li><a href="despacho.html">Despacho</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-      <div class="acciones-cliente">
-        <a class="btn btn-secundario" href="cuenta.html">Mi cuenta</a>
-        <a class="btn btn-primario" href="cuenta-corriente.html">Cuenta corriente</a>
+
+  <header class="cabecera-sitio">
+    <div class="contenedor">
+      <div class="barra-superior">
+        <a class="marca" href="index.html">
+          <strong>Ferreteria Los Maestros</strong>
+          <span>Materiales - herramientas - despacho a obra</span>
+        </a>
+        <button class="boton-menu" id="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir o cerrar menú principal">
+          Menu
+        </button>
       </div>
-    </nav>
-  </div>
-</header>
- 
-<main id="contenido-principal">
- 
-  <section class="hero" aria-labelledby="hero-titulo">
-    <div class="contenedor hero-interior">
+
+      <nav class="menu-principal" id="menu-principal" aria-label="Navegacion principal">
+        <ul class="menu">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li class="menu-item-desplegable">
+            <button class="menu-desplegable-boton" type="button" id="boton-categorias" aria-expanded="false" aria-controls="submenu-categorias">
+              Categorias
+            </button>
+            <ul class="submenu" id="submenu-categorias">
+              <li><a href="catalogo.html?cat=herramientas">Herramientas</a></li>
+              <li><a href="catalogo.html?cat=construccion">Construccion</a></li>
+              <li><a href="catalogo.html?cat=gasfiteria">Gasfiteria</a></li>
+              <li><a href="catalogo.html?cat=electricidad">Electricidad</a></li>
+            </ul>
+          </li>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="contratistas.html">Contratistas</a></li>
+          <li><a href="despacho.html">Despacho</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div class="acciones-cliente">
+          <a class="btn btn-secundario" href="cuenta.html">Mi cuenta</a>
+          <a class="btn btn-primario" href="cuenta-corriente.html">Cuenta corriente</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="contenedor hero-interior">
+        <div>
+          <p class="hero-etiqueta">Retiro en tienda o despacho a obra</p>
+          <h1 id="hero-titulo">Todo lo que necesita tu proyecto, en un solo lugar</h1>
+          <p>Materiales de construccion, herramientas y gasfiteria para particulares y contratistas, con cuenta corriente y despacho dentro de la comuna.</p>
+          <div class="hero-acciones">
+            <a class="btn btn-primario" href="catalogo.html">Ver catalogo</a>
+            <a class="btn btn-secundario" href="contratistas.html">Soy contratista</a>
+          </div>
+        </div>
+        <dl class="hero-datos">
+          <div>
+            <dt>+800</dt>
+            <dd>referencias en stock</dd>
+          </div>
+          <div>
+            <dt>24h</dt>
+            <dd>despacho en zona de cobertura</dd>
+          </div>
+          <div>
+            <dt>30 dias</dt>
+            <dd>cuenta corriente para contratistas</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section aria-labelledby="titulo-productos">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <h2 id="titulo-productos">Productos destacados</h2>
+          <p>Los mas solicitados por particulares y contratistas esta semana.</p>
+        </div>
+        <div class="grilla-productos">
+          <article class="producto">
+            <div class="producto-imagen"><img src="assets/img/productos/taladro-percutor-650w.jpg" alt="Taladro percutor 650W"></div>
+            <div class="producto-cuerpo">
+              <p class="producto-categoria">Herramientas</p>
+              <h3>Taladro percutor 650W</h3>
+              <div class="producto-precio-fila">
+                <span class="producto-precio">$34.990</span>
+                <span class="producto-stock">Stock disponible</span>
+              </div>
+            </div>
+          </article>
+          <article class="producto">
+            <div class="producto-imagen"><img src="assets/img/productos/cemento-gris-25kg.jpg" alt="Cemento gris 25kg"></div>
+            <div class="producto-cuerpo">
+              <p class="producto-categoria">Construccion</p>
+              <h3>Cemento gris 25kg</h3>
+              <div class="producto-precio-fila">
+                <span class="producto-precio">$6.490</span>
+                <span class="producto-stock">Stock disponible</span>
+              </div>
+            </div>
+          </article>
+          <article class="producto">
+            <div class="producto-imagen"><img src="assets/img/productos/tubo-pvc-110mm-3m.jpg" alt="Tubo PVC 110mm x 3m"></div>
+            <div class="producto-cuerpo">
+              <p class="producto-categoria">Gasfiteria</p>
+              <h3>Tubo PVC 110mm x 3m</h3>
+              <div class="producto-precio-fila">
+                <span class="producto-precio">$8.990</span>
+                <span class="producto-stock">ultimas unidades</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="titulo-contratistas">
+      <div class="contenedor">
+        <div class="bloque-contratistas">
+          <div>
+            <h2 id="titulo-contratistas">Compra a credito con cuenta corriente</h2>
+            <p>Pensado para contratistas: compra durante el mes y paga en un solo corte, sin perder el ritmo de la obra.</p>
+            <ul class="lista-beneficios">
+              <li>Cierre mensual con historial de movimientos en linea</li>
+              <li>Despacho directo a la direccion de la obra</li>
+              <li>Atencion prioritaria en meson</li>
+            </ul>
+          </div>
+          <div class="tarjeta-simulador">
+            <h3>Solicitar cuenta corriente</h3>
+            <div class="campo-simulado">Nombre de la empresa o contratista</div>
+            <div class="campo-simulado" style="margin-top:0.6rem;">RUT</div>
+            <a class="btn btn-primario btn-ancho" href="cuenta-corriente.html" style="margin-top:1rem;">Solicitar evaluación</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie-sitio">
+    <div class="contenedor pie-interior">
       <div>
-        <p class="hero-etiqueta">Retiro en tienda o despacho a obra</p>
-        <h1 id="hero-titulo">Todo lo que necesita tu proyecto, en un solo lugar</h1>
-        <p>Materiales de construccion, herramientas y gasfiteria para particulares y contratistas, con cuenta corriente y despacho dentro de la comuna.</p>
-        <div class="hero-acciones">
-          <a class="btn btn-primario" href="catalogo.html">Ver catalogo</a>
-          <a class="btn btn-secundario" href="contratistas.html">Soy contratista</a>
-        </div>
+        <h4>Ferreteria Los Maestros</h4>
+        <p>Materiales de construccion, herramientas y gasfiteria para particulares y contratistas.</p>
       </div>
-      <dl class="hero-datos">
-        <div>
-          <dt>+800</dt>
-          <dd>referencias en stock</dd>
-        </div>
-        <div>
-          <dt>24h</dt>
-          <dd>despacho en zona de cobertura</dd>
-        </div>
-        <div>
-          <dt>30 dias</dt>
-          <dd>cuenta corriente para contratistas</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
- 
-  <section aria-labelledby="titulo-categorias">
-    <div class="contenedor">
-      <div class="encabezado-seccion">
-        <h2 id="titulo-categorias">Categorias</h2>
-        <p>Encuentra lo que buscas por area de trabajo.</p>
+      <div>
+        <h4>Navegacion</h4>
+        <ul>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="contratistas.html">Contratistas</a></li>
+          <li><a href="despacho.html">Despacho</a></li>
+        </ul>
       </div>
-      <div class="grilla-categorias">
-        <a class="categoria" href="catalogo.html?cat=herramientas">
-          <span class="icono" aria-hidden="true"></span>
-          <h3>Herramientas</h3>
-          <p>Manuales y electricas</p>
-        </a>
-        <a class="categoria" href="catalogo.html?cat=construccion">
-          <span class="icono" aria-hidden="true"></span>
-          <h3>Construccion</h3>
-          <p>Cemento, aridos, fierros</p>
-        </a>
-        <a class="categoria" href="catalogo.html?cat=gasfiteria">
-          <span class="icono" aria-hidden="true"></span>
-          <h3>Gasfiteria</h3>
-          <p>Tuberias y conexiones</p>
-        </a>
-        <a class="categoria" href="catalogo.html?cat=electricidad">
-          <span class="icono" aria-hidden="true"></span>
-          <h3>Electricidad</h3>
-          <p>Cables, tableros, iluminacion</p>
-        </a>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="contacto.html">Escribenos</a></li>
+        </ul>
       </div>
     </div>
-  </section>
- 
-  <section aria-labelledby="titulo-productos">
-    <div class="contenedor">
-      <div class="encabezado-seccion">
-        <h2 id="titulo-productos">Productos destacados</h2>
-        <p>Los mas solicitados por particulares y contratistas esta semana.</p>
-      </div>
-      <div class="grilla-productos">
-        <article class="producto">
-          <div class="producto-imagen">Foto producto</div>
-          <div class="producto-cuerpo">
-            <p class="producto-categoria">Herramientas</p>
-            <h3>Taladro percutor 650W</h3>
-            <div class="producto-precio-fila">
-              <span class="producto-precio">$34.990</span>
-              <span class="producto-stock">Stock disponible</span>
-            </div>
-          </div>
-        </article>
-        <article class="producto">
-          <div class="producto-imagen">Foto producto</div>
-          <div class="producto-cuerpo">
-            <p class="producto-categoria">Construccion</p>
-            <h3>Cemento gris 25kg</h3>
-            <div class="producto-precio-fila">
-              <span class="producto-precio">$6.490</span>
-              <span class="producto-stock">Stock disponible</span>
-            </div>
-          </div>
-        </article>
-        <article class="producto">
-          <div class="producto-imagen">Foto producto</div>
-          <div class="producto-cuerpo">
-            <p class="producto-categoria">Gasfiteria</p>
-            <h3>Tubo PVC 110mm x 3m</h3>
-            <div class="producto-precio-fila">
-              <span class="producto-precio">$8.990</span>
-              <span class="producto-stock">ultimas unidades</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
- 
-  <section aria-labelledby="titulo-contratistas">
-    <div class="contenedor">
-      <div class="bloque-contratistas">
-        <div>
-          <h2 id="titulo-contratistas">Compra a credito con cuenta corriente</h2>
-          <p>Pensado para contratistas: compra durante el mes y paga en un solo corte, sin perder el ritmo de la obra.</p>
-          <ul class="lista-beneficios">
-            <li>Cierre mensual con historial de movimientos en linea</li>
-            <li>Despacho directo a la direccion de la obra</li>
-            <li>Atencion prioritaria en meson</li>
-          </ul>
-        </div>
-        <div class="tarjeta-simulador">
-          <h3>Solicitar cuenta corriente</h3>
-          <div class="campo-simulado">Nombre de la empresa o contratista</div>
-          <div class="campo-simulado" style="margin-top:0.6rem;">RUT</div>
-          <a class="btn btn-primario btn-ancho" href="cuenta-corriente.html" style="margin-top:1rem;">Solicitar evaluación</a>
-        </div>
-      </div>
+    <p class="pie-legal">Proyecto academico · Desarrollo FullStack II</p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>
