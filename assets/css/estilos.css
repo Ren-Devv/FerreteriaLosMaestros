@@ -190,9 +190,8 @@ nav.menu-principal.abierto { display: block; }
    ============================================ */
 .hero {
   color: #fff;
-  background:
-    linear-gradient(100deg, rgba(20,23,26,0.94) 0%, rgba(20,23,26,0.72) 55%, rgba(20,23,26,0.35) 100%),
-    repeating-linear-gradient(135deg, #2A2F34 0 2px, #23272B 2px 34px);
+  background: linear-gradient(100deg, rgba(20,23,26,0.94) 0%, rgba(20,23,26,0.72) 55%, rgba(20,23,26,0.5) 100%),
+              var(--color-grafito-oscuro);
 }
  
 .hero-interior {
@@ -254,9 +253,20 @@ nav.menu-principal.abierto { display: block; }
 /* ============================================
    4. Secciones generales
    ============================================ */
+
 main section { padding-block: 3rem; }
+
+/* 
 main section + section { border-top: 1px solid var(--color-borde); }
- 
+*/
+
+/* imagenes */
+.producto-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .encabezado-seccion {
   display: flex;
   flex-wrap: wrap;
@@ -483,4 +493,199 @@ main section + section { border-top: 1px solid var(--color-borde); }
   font-size: 0.78rem;
   text-align: center;
   border-top: 1px solid #2E3338;
+}
+
+
+/* ============================================
+   Submenú Categorías (desplegable en el menú)
+   ============================================ */
+.menu-item-desplegable { position: relative; }
+
+.menu-desplegable-boton {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.4rem;
+  color: #E7E9EA;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radio);
+  font: inherit;
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+}
+.menu-desplegable-boton:hover { color: #fff; background: #2E3338; }
+
+.submenu {
+  display: none;
+  margin: 0.2rem 0 0.4rem;
+  padding: 0;
+  list-style: none;
+}
+.submenu.abierto { display: block; }
+
+.submenu a {
+  display: block;
+  padding: 0.5rem 0.4rem 0.5rem 1.2rem;
+  color: #C7CDD2;
+  border-radius: var(--radio);
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+.submenu a:hover { color: #fff; background: #2E3338; }
+
+@media (min-width: 62rem) {
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 12rem;
+    padding: 0.4rem;
+    background: var(--color-grafito-oscuro);
+    border: 1px solid #33383D;
+    border-radius: var(--radio);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    z-index: 10;
+  }
+}
+
+/* ============================================
+   estilo catalogos
+   ============================================ */
+.tabs-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.tab {
+  padding: 0.55rem 1rem;
+  color: var(--color-texto);
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  font: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.tab:hover { border-color: var(--color-naranja); }
+.tab.activo {
+  color: #0c1110;
+  background: var(--color-naranja);
+  border-color: var(--color-naranja);
+}
+
+/* ============================================
+   Formulario de contacto
+   ============================================ */
+.formulario {
+  display: grid;
+  gap: 1.75rem;
+  max-width: 40rem;
+}
+
+.formulario fieldset {
+  padding: 1.5rem;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+.formulario legend {
+  padding: 0 0.5rem;
+  font-family: var(--fuente-display);
+  font-size: 1rem;
+  color: var(--color-grafito);
+}
+
+.formulario label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+.formulario fieldset > label:first-of-type,
+.formulario fieldset > *:first-child + label {
+  margin-top: 0;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="tel"],
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  font: inherit;
+  font-size: 0.92rem;
+}
+
+.formulario input:focus-visible,
+.formulario select:focus-visible,
+.formulario textarea:focus-visible {
+  outline: 3px solid var(--color-naranja);
+  outline-offset: 1px;
+  border-color: var(--color-naranja);
+}
+
+.formulario textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.formulario fieldset p {
+  margin: 1rem 0 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+/* Radios y checkbox: label en línea junto al input, no bloque */
+.formulario label:has(input[type="radio"]),
+.formulario label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.formulario input[type="radio"],
+.formulario input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--color-naranja);
+  cursor: pointer;
+}
+
+.formulario > label:has(input[type="checkbox"]) {
+  padding: 1rem;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  font-size: 0.88rem;
+}
+
+.formulario button[type="submit"] {
+  justify-self: start;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  background: var(--color-naranja);
+  border: 0;
+  border-radius: var(--radio);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.formulario button[type="submit"]:hover {
+  background: var(--color-naranja-oscuro);
 }
