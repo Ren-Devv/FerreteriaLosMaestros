@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión — Ferretería Los Maestros</title>
+  <meta name="description" content="Inicia sesión en Ferretería Los Maestros." />
+  <link rel="stylesheet" href="assets/css/estilos.css" />
+</head>
+<body>
+
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+
+  <header class="cabecera-sitio">
+    <div class="contenedor">
+      <div class="barra-superior">
+        <a class="marca" href="index.html">
+          <strong>Ferreteria Los Maestros</strong>
+          <span>Materiales - herramientas - despacho a obra</span>
+        </a>
+        <button class="boton-menu" id="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir o cerrar menú principal">
+          Menu
+        </button>
+      </div>
+
+      <nav class="menu-principal" id="menu-principal" aria-label="Navegacion principal">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="menu-item-desplegable">
+            <button class="menu-desplegable-boton" type="button" id="boton-categorias" aria-expanded="false" aria-controls="submenu-categorias">
+              Categorias
+            </button>
+            <ul class="submenu" id="submenu-categorias">
+              <li><a href="catalogo.html?cat=herramientas">Herramientas</a></li>
+              <li><a href="catalogo.html?cat=construccion">Construccion</a></li>
+              <li><a href="catalogo.html?cat=gasfiteria">Gasfiteria</a></li>
+              <li><a href="catalogo.html?cat=electricidad">Electricidad</a></li>
+            </ul>
+          </li>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="contratistas.html">Contratistas</a></li>
+          <li><a href="despacho.html">Despacho</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div class="acciones-cliente">
+          <a class="btn btn-secundario" href="cuenta.html">Mi cuenta</a>
+          <a class="btn btn-secundario" href="login.html" aria-current="page">Iniciar sesión</a>
+          <a class="btn btn-primario" href="registro.html">Crear cuenta</a>
+          <a class="btn btn-primario" href="cuenta-corriente.html">Cuenta corriente</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <section class="contenedor">
+      <div class="encabezado-seccion">
+        <h1>Inicia sesión</h1>
+        <p>Ingresa con tu correo y contraseña.</p>
+      </div>
+
+      <form id="form-login" class="formulario" novalidate>
+        <fieldset>
+          <legend>Tus datos de acceso</legend>
+
+          <label for="correo">Correo electrónico</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            maxlength="100"
+            placeholder="tunombre@duoc.cl"
+            autocomplete="email"
+            aria-describedby="error-correo"
+          />
+          <small id="error-correo" class="mensaje-error" role="alert"></small>
+
+          <label for="password">Contraseña</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="4"
+            maxlength="10"
+            autocomplete="current-password"
+            aria-describedby="error-password"
+          />
+          <small id="error-password" class="mensaje-error" role="alert"></small>
+        </fieldset>
+
+        <button type="submit">Iniciar sesión</button>
+
+        <p id="login-confirmacion" class="mensaje-confirmacion" hidden role="status"></p>
+
+        <p class="enlace-secundario">
+          ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie-sitio">
+    <div class="contenedor pie-interior">
+      <div>
+        <h4>Ferreteria Los Maestros</h4>
+        <p>Materiales de construccion, herramientas y gasfiteria para particulares y contratistas.</p>
+      </div>
+      <div>
+        <h4>Navegacion</h4>
+        <ul>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="contratistas.html">Contratistas</a></li>
+          <li><a href="despacho.html">Despacho</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="contacto.html">Escribenos</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pie-legal">Proyecto academico · Desarrollo FullStack II</p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/login.js"></script>
+</body>
+</html>
