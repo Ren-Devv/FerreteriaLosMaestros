@@ -23,7 +23,18 @@
     </div>
     <nav class="menu-principal" id="menu-principal" aria-label="Navegacion principal">
       <ul class="menu">
-        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="menu-item-desplegable">
+          <button class="menu-desplegable-boton" type="button" id="boton-categorias" aria-expanded="false" aria-controls="submenu-categorias">
+            Categorias
+          </button>
+          <ul class="submenu" id="submenu-categorias">
+            <li><a href="catalogo.html?cat=herramientas">Herramientas</a></li>
+            <li><a href="catalogo.html?cat=construccion">Construccion</a></li>
+            <li><a href="catalogo.html?cat=gasfiteria">Gasfiteria</a></li>
+            <li><a href="catalogo.html?cat=electricidad">Electricidad</a></li>
+          </ul>
+        </li>
         <li><a href="catalogo.html">Catalogo</a></li>
         <li><a href="contratistas.html">Contratistas</a></li>
         <li><a href="despacho.html">Despacho</a></li>
@@ -31,6 +42,8 @@
       </ul>
       <div class="acciones-cliente">
         <a class="btn btn-secundario" href="cuenta.html">Mi cuenta</a>
+        <a class="btn btn-secundario" href="login.html">Iniciar sesión</a>
+        <a class="btn btn-primario" href="registro.html" aria-current="page">Crear cuenta</a>
         <a class="btn btn-primario" href="cuenta-corriente.html">Cuenta corriente</a>
       </div>
     </nav>
@@ -165,7 +178,7 @@
         vista Administrador (mantenedor de Usuario), no en el registro público.
       -->
 
-      <button type="submit" class="boton boton-primario">Crear cuenta</button>
+      <button type="submit" class="btn btn-primario">Crear cuenta</button>
 
       <p id="registro-confirmacion" class="mensaje-confirmacion" hidden role="status">
         ¡Cuenta creada! Ya puedes <a href="login.html">iniciar sesión</a>.
@@ -173,11 +186,28 @@
     </form>
   </main>
 
-  <!-- FOOTER: reemplazar por el footer real de index.html -->
-  <footer class="pie-pagina">
-    <div class="contenedor">
-      <p>&copy; 2026 Ferretería Los Maestros</p>
+  <footer class="pie-sitio">
+    <div class="contenedor pie-interior">
+      <div>
+        <h4>Ferreteria Los Maestros</h4>
+        <p>Materiales de construccion, herramientas y gasfiteria para particulares y contratistas.</p>
+      </div>
+      <div>
+        <h4>Navegacion</h4>
+        <ul>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="contratistas.html">Contratistas</a></li>
+          <li><a href="despacho.html">Despacho</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="contacto.html">Escribenos</a></li>
+        </ul>
+      </div>
     </div>
+    <p class="pie-legal">Proyecto academico · Desarrollo FullStack II</p>
   </footer>
 
   <script src="js/datos-regiones.js"></script>
