@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explora el catálogo completo de Ferreteria Los Maestros, filtrado por categoría">
-  <title>Catálogo | Ferreteria Los Maestros</title>
-  <link rel="stylesheet" href="assets/css/estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión — Ferretería Los Maestros</title>
+  <meta name="description" content="Inicia sesión en Ferretería Los Maestros." />
+  <link rel="stylesheet" href="assets/css/estilos.css" />
 </head>
 <body>
+
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
 
   <header class="encabezado">
@@ -36,13 +37,15 @@
               <li><a href="catalogo.html?cat=electricidad">Electricidad</a></li>
             </ul>
           </li>
-          <li><a href="catalogo.html" aria-current="page">Catalogo</a></li>
+          <li><a href="catalogo.html">Catalogo</a></li>
           <li><a href="contratistas.html">Contratistas</a></li>
           <li><a href="despacho.html">Despacho</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
         <div class="acciones-cliente">
           <a class="btn btn-secundario" href="cuenta.html">Mi cuenta</a>
+          <a class="btn btn-secundario" href="login.html" aria-current="page">Iniciar sesión</a>
+          <a class="btn btn-primario" href="registro.html">Crear cuenta</a>
           <a class="btn btn-primario" href="cuenta-corriente.html">Cuenta corriente</a>
         </div>
       </nav>
@@ -50,29 +53,51 @@
   </header>
 
   <main id="contenido-principal">
-  <section class="encabezado-catalogo">
-    <div class="contenedor">
-      <h1>Catálogo de productos</h1>
-      <p>Filtra por categoría para encontrar lo que necesitas.</p>
-    </div>
-  </section>
-
-  <section aria-labelledby="titulo-catalogo">
-    <div class="contenedor">
-      <div class="tabs-categorias" role="tablist" aria-label="Filtrar por categoría">
-        <button class="tab activo" role="tab" aria-selected="true" data-categoria="">Todas</button>
-        <button class="tab" role="tab" aria-selected="false" data-categoria="herramientas">Herramientas</button>
-        <button class="tab" role="tab" aria-selected="false" data-categoria="construccion">Construcción</button>
-        <button class="tab" role="tab" aria-selected="false" data-categoria="gasfiteria">Gasfitería</button>
-        <button class="tab" role="tab" aria-selected="false" data-categoria="electricidad">Electricidad</button>
+    <section class="contenedor">
+      <div class="encabezado-seccion">
+        <h1>Inicia sesión</h1>
+        <p>Ingresa con tu correo y contraseña.</p>
       </div>
 
-      <div class="grilla-productos" id="grilla-productos" aria-live="polite">
-        <!-- Se llena por JS -->
-      </div>
-    </div>
-  </section>
-</main>
+      <form id="form-login" class="formulario" novalidate>
+        <fieldset>
+          <legend>Tus datos de acceso</legend>
+
+          <label for="correo">Correo electrónico</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            maxlength="100"
+            placeholder="tunombre@duoc.cl"
+            autocomplete="email"
+            aria-describedby="error-correo"
+          />
+          <small id="error-correo" class="mensaje-error" role="alert"></small>
+
+          <label for="password">Contraseña</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="4"
+            maxlength="10"
+            autocomplete="current-password"
+            aria-describedby="error-password"
+          />
+          <small id="error-password" class="mensaje-error" role="alert"></small>
+        </fieldset>
+
+        <button type="submit">Iniciar sesión</button>
+
+        <p id="login-confirmacion" class="mensaje-confirmacion" hidden role="status"></p>
+
+        <p class="enlace-secundario">
+          ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+        </p>
+      </form>
+    </section>
+  </main>
 
   <footer class="pie-sitio">
     <div class="contenedor pie-interior">
@@ -100,5 +125,6 @@
 
   <script src="assets/js/app.js"></script>
   <script src="assets/js/menu.js"></script>
+  <script src="assets/js/login.js"></script>
 </body>
 </html>
