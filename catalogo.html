@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bienvenido a Ferreteria Los Maestros">
-  <title>Inicio | Ferreteria Los Maestros</title>
+  <meta name="description" content="Explora el catálogo completo de Ferreteria Los Maestros, filtrado por categoría">
+  <title>Catálogo | Ferreteria Los Maestros</title>
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
 
-  <header class="cabecera-sitio">
+  <header class="encabezado">
     <div class="contenedor">
-      <div class="barra-superior">
+      <div class="encabezado-superior">
         <a class="marca" href="index.html">
           <strong>Ferreteria Los Maestros</strong>
           <span>Materiales - herramientas - despacho a obra</span>
@@ -24,19 +24,24 @@
 
       <nav class="menu-principal" id="menu-principal" aria-label="Navegacion principal">
         <ul class="menu">
-          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="index.html">Inicio</a></li>
           <li class="menu-item-desplegable">
             <button class="menu-desplegable-boton" type="button" id="boton-categorias" aria-expanded="false" aria-controls="submenu-categorias">
               Categorias
             </button>
             <ul class="submenu" id="submenu-categorias">
+              <li><a href="catalogo.html?cat=construccion">Materiales de Construcción</a></li>
+              <li><a href="catalogo.html?cat=pinturas">Pinturas y Recubrimientos</a></li>
               <li><a href="catalogo.html?cat=herramientas">Herramientas</a></li>
-              <li><a href="catalogo.html?cat=construccion">Construccion</a></li>
-              <li><a href="catalogo.html?cat=gasfiteria">Gasfiteria</a></li>
+              <li><a href="catalogo.html?cat=gasfiteria">Gasfitería</a></li>
               <li><a href="catalogo.html?cat=electricidad">Electricidad</a></li>
+              <li><a href="catalogo.html?cat=tornilleria">Tornillería y Fijaciones</a></li>
+              <li><a href="catalogo.html?cat=madera">Madera y Tableros</a></li>
+              <li><a href="catalogo.html?cat=seguridad">Seguridad y EPP</a></li>
+              <li><a href="catalogo.html?cat=jardin">Jardín y Exterior</a></li>
             </ul>
           </li>
-          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="catalogo.html" aria-current="page">Catalogo</a></li>
           <li><a href="contratistas.html">Contratistas</a></li>
           <li><a href="despacho.html">Despacho</a></li>
           <li><a href="contacto.html">Contacto</a></li>
@@ -60,11 +65,7 @@
   <section aria-labelledby="titulo-catalogo">
     <div class="contenedor">
       <div class="tabs-categorias" role="tablist" aria-label="Filtrar por categoría">
-        <button class="tab activo" role="tab" aria-selected="true" data-categoria="">Todas</button>
-        <button class="tab" role="tab" aria-selected="false" data-categoria="herramientas">Herramientas</button>
-        <button class="tab" role="tab" aria-selected="false" data-categoria="construccion">Construcción</button>
-        <button class="tab" role="tab" aria-selected="false" data-categoria="gasfiteria">Gasfitería</button>
-        <button class="tab" role="tab" aria-selected="false" data-categoria="electricidad">Electricidad</button>
+        <!-- Se llena por JS (catalogo.js), a partir de categorias.json -->
       </div>
 
       <div class="grilla-productos" id="grilla-productos" aria-live="polite">
@@ -76,6 +77,10 @@
 
   <footer class="pie-sitio">
     <div class="contenedor pie-interior">
+      <div>
+        <h4>Ferreteria Los Maestros</h4>
+        <p>Materiales de construccion, herramientas y gasfiteria para particulares y contratistas.</p>
+      </div>
       <div>
         <h4>Navegacion</h4>
         <ul>
@@ -96,5 +101,7 @@
 
   <script src="assets/js/app.js"></script>
   <script src="assets/js/menu.js"></script>
+  <script src="assets/js/productos.js"></script>
+  <script src="assets/js/catalogo.js"></script>
 </body>
 </html>

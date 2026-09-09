@@ -1,18 +1,18 @@
 /* ============================================
-   1. Variables — paleta de marca
-   https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff
+   1. Variables — paleta negro y amarillo
+   https://coolors.co/000000-1a1a1a-ffc300-e5e5e5-ffffff
    ============================================ */
 :root {
   --color-grafito: #000000;
-  --color-grafito-oscuro: #14213D;
-  --color-acero: #43516E;
-  --color-naranja: #FCA311;
-  --color-naranja-oscuro: #D68B0E;
+  --color-grafito-oscuro: #0D0D0D;
+  --color-acero: #262626;
+  --color-naranja: #FFC300;
+  --color-naranja-oscuro: #E0AC00;
   --color-texto: #000000;
-  --color-texto-suave: #5B6570;
-  --color-fondo: #E5E5E5;
+  --color-texto-suave: #5B5B5B;
+  --color-fondo: #F2F2F0;
   --color-superficie: #FFFFFF;
-  --color-borde: #D0D0D0;
+  --color-borde: #D9D9D9;
   --fuente-display: "Oswald", Arial, sans-serif;
   --fuente-base: "Archivo", Arial, sans-serif;
   --radio: 0.4rem;
@@ -188,7 +188,7 @@ nav.menu-principal.abierto { display: block; }
   cursor: pointer;
   white-space: nowrap;
 }
-.btn-primario { color: #fff; background: var(--color-naranja); }
+.btn-primario { color: #000; background: var(--color-naranja); }
 .btn-primario:hover { background: var(--color-naranja-oscuro); }
 .btn-secundario { color: #fff; background: transparent; border: 1px solid #3A4560; }
 .btn-secundario:hover { border-color: #5B6B93; }
@@ -213,9 +213,9 @@ nav.menu-principal.abierto { display: block; }
   display: inline-flex;
   width: fit-content;
   padding: 0.3rem 0.65rem;
-  color: #FEE3B8;
-  background: rgba(252,163,17,0.18);
-  border: 1px solid rgba(252,163,17,0.5);
+  color: #FFC300;
+  background: rgba(255,195,0,0.15);
+  border: 1px solid rgba(255,195,0,0.5);
   border-radius: var(--radio);
   font-size: 0.78rem;
   font-weight: 600;
@@ -686,7 +686,7 @@ main section + section { border-top: 1px solid var(--color-borde); }
 .formulario button[type="submit"] {
   justify-self: start;
   padding: 0.75rem 1.5rem;
-  color: #fff;
+  color: #000;
   background: var(--color-naranja);
   border: 0;
   border-radius: var(--radio);
@@ -745,198 +745,92 @@ main section + section { border-top: 1px solid var(--color-borde); }
   color: var(--color-texto-suave);
   text-align: center;
 }
-
+/* ============================================
+   Encabezado de página (catálogo, contratistas, etc.)
+   ============================================ */
+.encabezado-catalogo {
+  padding-block: 2.5rem 2rem;
+  color: #fff;
+  background: var(--color-grafito-oscuro);
+  border-bottom: 3px solid var(--color-naranja);
+}
+.encabezado-catalogo h1 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+.encabezado-catalogo p {
+  margin-top: 0.6rem;
+  max-width: 50ch;
+  color: #D6D9DB;
+}
 
 /* ============================================
-   Submenú Categorías (desplegable en el menú)
+   Directorio de contratistas
    ============================================ */
-.menu-item-desplegable { position: relative; }
-
-.menu-desplegable-boton {
-  display: block;
-  width: 100%;
-  padding: 0.6rem 0.4rem;
-  color: #E7E9EA;
-  background: transparent;
-  border: 0;
-  border-radius: var(--radio);
-  font: inherit;
-  font-size: 0.95rem;
-  text-align: left;
-  cursor: pointer;
-}
-.menu-desplegable-boton:hover { color: #fff; background: #2E3338; }
-
-.submenu {
-  display: none;
-  margin: 0.2rem 0 0.4rem;
+.lista-contratistas {
+  margin: 0;
   padding: 0;
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
-.submenu.abierto { display: block; }
+@media (min-width: 40rem) {
+  .lista-contratistas { grid-template-columns: repeat(2, 1fr); }
+}
 
-.submenu a {
-  display: block;
-  padding: 0.5rem 0.4rem 0.5rem 1.2rem;
-  color: #C7CDD2;
+.contratista {
+  padding: 1.25rem 1.4rem;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
   border-radius: var(--radio);
-  text-decoration: none;
-  font-size: 0.88rem;
-}
-.submenu a:hover { color: #fff; background: #2E3338; }
-
-@media (min-width: 62rem) {
-  .submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 12rem;
-    padding: 0.4rem;
-    background: var(--color-grafito-oscuro);
-    border: 1px solid #33383D;
-    border-radius: var(--radio);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    z-index: 10;
-  }
 }
 
-/* ============================================
-   estilo catalogos
-   ============================================ */
-.tabs-categorias {
+.contratista-cabecera {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.75rem;
-}
-
-.tab {
-  padding: 0.55rem 1rem;
-  color: var(--color-texto);
-  background: var(--color-superficie);
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radio);
-  font: inherit;
-  font-size: 0.88rem;
-  cursor: pointer;
-}
-.tab:hover { border-color: var(--color-naranja); }
-.tab.activo {
-  color: #0c1110;
-  background: var(--color-naranja);
-  border-color: var(--color-naranja);
-}
-
-/* ============================================
-   Formulario de contacto
-   ============================================ */
-.formulario {
-  display: grid;
-  gap: 1.75rem;
-  max-width: 40rem;
-}
-
-.formulario fieldset {
-  padding: 1.5rem;
-  background: var(--color-superficie);
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radio);
-}
-
-.formulario legend {
-  padding: 0 0.5rem;
-  font-family: var(--fuente-display);
-  font-size: 1rem;
-  color: var(--color-grafito);
-}
-
-.formulario label {
-  display: block;
-  margin-top: 1rem;
-  margin-bottom: 0.35rem;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--color-texto);
-}
-.formulario fieldset > label:first-of-type,
-.formulario fieldset > *:first-child + label {
-  margin-top: 0;
-}
-
-.formulario input[type="text"],
-.formulario input[type="email"],
-.formulario input[type="tel"],
-.formulario select,
-.formulario textarea {
-  width: 100%;
-  padding: 0.65rem 0.8rem;
-  color: var(--color-texto);
-  background: var(--color-fondo);
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radio);
-  font: inherit;
-  font-size: 0.92rem;
-}
-
-.formulario input:focus-visible,
-.formulario select:focus-visible,
-.formulario textarea:focus-visible {
-  outline: 3px solid var(--color-naranja);
-  outline-offset: 1px;
-  border-color: var(--color-naranja);
-}
-
-.formulario textarea {
-  resize: vertical;
-  min-height: 6rem;
-}
-
-.formulario fieldset p {
-  margin: 1rem 0 0.5rem;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--color-texto);
-}
-
-/* Radios y checkbox: label en línea junto al input, no bloque */
-.formulario label:has(input[type="radio"]),
-.formulario label:has(input[type="checkbox"]) {
-  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
-  margin-top: 0.5rem;
-  font-weight: 400;
-  cursor: pointer;
+  margin-bottom: 0.85rem;
+}
+.contratista-cabecera h3 {
+  font-size: 1.05rem;
+  font-family: var(--fuente-base);
+  font-weight: 700;
 }
 
-.formulario input[type="radio"],
-.formulario input[type="checkbox"] {
-  width: 1.1rem;
-  height: 1.1rem;
-  accent-color: var(--color-naranja);
-  cursor: pointer;
-}
-
-.formulario > label:has(input[type="checkbox"]) {
-  padding: 1rem;
-  background: var(--color-superficie);
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radio);
-  font-size: 0.88rem;
-}
-
-.formulario button[type="submit"] {
-  justify-self: start;
-  padding: 0.75rem 1.5rem;
-  color: #fff;
+.contratista-especialidad {
+  padding: 0.25rem 0.6rem;
+  color: #000;
   background: var(--color-naranja);
-  border: 0;
   border-radius: var(--radio);
-  font: inherit;
+  font-size: 0.76rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
-.formulario button[type="submit"]:hover {
-  background: var(--color-naranja-oscuro);
+
+.contratista address {
+  font-style: normal;
+}
+.contratista address p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+}
+.contratista address a {
+  color: var(--color-texto);
+  text-decoration: none;
+}
+.contratista address a:hover {
+  color: var(--color-naranja-oscuro);
+  text-decoration: underline;
+}
+
+.sin-resultados {
+  grid-column: 1 / -1;
+  padding: 2rem 1rem;
+  color: var(--color-texto-suave);
+  text-align: center;
 }
