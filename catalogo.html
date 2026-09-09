@@ -30,10 +30,15 @@
               Categorias
             </button>
             <ul class="submenu" id="submenu-categorias">
+              <li><a href="catalogo.html?cat=construccion">Materiales de Construcción</a></li>
+              <li><a href="catalogo.html?cat=pinturas">Pinturas y Recubrimientos</a></li>
               <li><a href="catalogo.html?cat=herramientas">Herramientas</a></li>
-              <li><a href="catalogo.html?cat=construccion">Construccion</a></li>
-              <li><a href="catalogo.html?cat=gasfiteria">Gasfiteria</a></li>
+              <li><a href="catalogo.html?cat=gasfiteria">Gasfitería</a></li>
               <li><a href="catalogo.html?cat=electricidad">Electricidad</a></li>
+              <li><a href="catalogo.html?cat=tornilleria">Tornillería y Fijaciones</a></li>
+              <li><a href="catalogo.html?cat=madera">Madera y Tableros</a></li>
+              <li><a href="catalogo.html?cat=seguridad">Seguridad y EPP</a></li>
+              <li><a href="catalogo.html?cat=jardin">Jardín y Exterior</a></li>
             </ul>
           </li>
           <li><a href="catalogo.html" aria-current="page">Catalogo</a></li>
@@ -60,11 +65,7 @@
   <section aria-labelledby="titulo-catalogo">
     <div class="contenedor">
       <div class="tabs-categorias" role="tablist" aria-label="Filtrar por categoría">
-        <button class="tab activo" role="tab" aria-selected="true" data-categoria="">Todas</button>
-        <button class="tab" role="tab" aria-selected="false" data-categoria="herramientas">Herramientas</button>
-        <button class="tab" role="tab" aria-selected="false" data-categoria="construccion">Construcción</button>
-        <button class="tab" role="tab" aria-selected="false" data-categoria="gasfiteria">Gasfitería</button>
-        <button class="tab" role="tab" aria-selected="false" data-categoria="electricidad">Electricidad</button>
+        <!-- Se llena por JS (catalogo.js), a partir de categorias.json -->
       </div>
 
       <div class="grilla-productos" id="grilla-productos" aria-live="polite">
@@ -100,5 +101,7 @@
 
   <script src="assets/js/app.js"></script>
   <script src="assets/js/menu.js"></script>
+  <script src="assets/js/productos.js"></script>
+  <script src="assets/js/catalogo.js"></script>
 </body>
 </html>
