@@ -47,8 +47,11 @@
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
         <div class="acciones-cliente">
-          <a class="btn btn-secundario" href="perfil.html">Mi perfil</a>
-          <a class="btn btn-primario" href="registro.html">Registrarse</a>
+          <a class="btn btn-secundario" href="perfil.html" id="enlace-mi-cuenta">Mi cuenta</a>
+          <a class="btn btn-secundario" href="login.html" id="enlace-iniciar-sesion">Iniciar sesión</a>
+          <a class="btn btn-primario" href="registro.html" id="enlace-crear-cuenta">Crear cuenta</a>
+          <a class="btn btn-primario" href="cuenta-corriente.html" id="enlace-cuenta-corriente">Cuenta corriente</a>
+          <button class="btn btn-secundario" id="boton-cerrar-sesion-header" type="button" hidden>Cerrar sesión</button>
         </div>
       </nav>
     </div>
@@ -178,5 +181,6 @@
 
   <script src="assets/js/app.js"></script>
   <script src="assets/js/menu.js"></script>
+  <script src="assets/js/sesion.js"></script>
 </body>
 </html>
