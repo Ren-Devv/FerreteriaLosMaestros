@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Conoce las opciones de despacho y retiro en tienda de Ferreteria Los Maestros">
+	<title>Despacho | Ferreteria Los Maestros</title>
+	<link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+	<a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+
+	<header class="encabezado">
+		<div class="contenedor">
+			<div class="encabezado-superior">
+				<a class="marca" href="index.html">
+					<strong>Ferreteria Los Maestros</strong>
+					<span>Materiales - herramientas - despacho a obra</span>
+				</a>
+				<button class="boton-menu" id="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir o cerrar menú principal">
+					Menu
+				</button>
+			</div>
+
+			<nav class="menu-principal" id="menu-principal" aria-label="Navegacion principal">
+				<ul class="menu">
+					<li><a href="index.html">Inicio</a></li>
+					<li class="menu-item-desplegable">
+						<button class="menu-desplegable-boton" type="button" id="boton-categorias" aria-expanded="false" aria-controls="submenu-categorias">
+							Categorias
+						</button>
+						<ul class="submenu" id="submenu-categorias">
+							<li><a href="catalogo.html?cat=construccion">Materiales de Construcción</a></li>
+							<li><a href="catalogo.html?cat=pinturas">Pinturas y Recubrimientos</a></li>
+							<li><a href="catalogo.html?cat=herramientas">Herramientas</a></li>
+							<li><a href="catalogo.html?cat=gasfiteria">Gasfitería</a></li>
+							<li><a href="catalogo.html?cat=electricidad">Electricidad</a></li>
+							<li><a href="catalogo.html?cat=tornilleria">Tornillería y Fijaciones</a></li>
+							<li><a href="catalogo.html?cat=madera">Madera y Tableros</a></li>
+							<li><a href="catalogo.html?cat=seguridad">Seguridad y EPP</a></li>
+							<li><a href="catalogo.html?cat=jardin">Jardín y Exterior</a></li>
+						</ul>
+					</li>
+					<li><a href="catalogo.html">Catalogo</a></li>
+					<li><a href="contratistas.html">Contratistas</a></li>
+					<li><a href="despacho.html" aria-current="page">Despacho</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+				<div class="acciones-cliente">
+					<a class="btn btn-secundario" href="perfil.html" id="enlace-mi-cuenta">Mi cuenta</a>
+					<a class="btn btn-secundario" href="login.html" id="enlace-iniciar-sesion">Iniciar sesión</a>
+					<a class="btn btn-primario" href="registro.html" id="enlace-crear-cuenta">Crear cuenta</a>
+					<a class="btn btn-primario" href="cuenta-corriente.html" id="enlace-cuenta-corriente">Cuenta corriente</a>
+					<button class="btn btn-secundario" id="boton-cerrar-sesion-header" type="button" hidden>Cerrar sesión</button>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<main id="contenido-principal">
+		<section class="encabezado-catalogo">
+			<div class="contenedor">
+				<h1>Despacho a obra y retiro en tienda</h1>
+				<p>Recibe tus materiales donde los necesitas o retira tu compra de forma rápida y coordinada.</p>
+			</div>
+		</section>
+
+		<section aria-labelledby="titulo-cobertura">
+			<div class="contenedor">
+				<div class="encabezado-seccion">
+					<div>
+						<h2 id="titulo-cobertura">Despachamos dentro de la zona de cobertura</h2>
+						<p>Coordinamos la entrega según la dirección de tu obra y el tamaño de tu pedido.</p>
+					</div>
+				</div>
+
+				<div class="grilla-despacho">
+					<div class="mapa-marcador" role="img" aria-label="Zona de cobertura de despacho en la Región Metropolitana">
+						<span>Zona de cobertura<br>Región Metropolitana</span>
+					</div>
+
+					<div class="opciones-entrega">
+						<article class="opcion-entrega">
+							<div class="icono" aria-hidden="true">01</div>
+							<div>
+								<h3>Despacho a obra</h3>
+								<p>Entregamos materiales en comunas de la Región Metropolitana. La fecha y el valor se confirman al cotizar.</p>
+							</div>
+						</article>
+
+						<article class="opcion-entrega">
+							<div class="icono" aria-hidden="true">02</div>
+							<div>
+								<h3>Retiro en tienda</h3>
+								<p>Compra online y retira cuando te confirmemos que tus productos están listos en nuestro mesón.</p>
+							</div>
+						</article>
+
+						<article class="opcion-entrega">
+							<div class="icono" aria-hidden="true">03</div>
+							<div>
+								<h3>Coordinación personalizada</h3>
+								<p>Para pedidos voluminosos o de contratistas, revisamos el acceso y el horario de descarga antes de enviar.</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section aria-labelledby="titulo-proceso">
+			<div class="contenedor">
+				<div class="encabezado-seccion">
+					<h2 id="titulo-proceso">¿Cómo funciona?</h2>
+					<p>Así preparamos tu pedido para que llegue completo y a tiempo.</p>
+				</div>
+
+				<div class="grilla-categorias">
+					<article class="categoria">
+						<div class="icono" aria-hidden="true">1</div>
+						<h3>Elige tus productos</h3>
+						<p>Revisa el catálogo y reúne los materiales que necesita tu proyecto.</p>
+					</article>
+					<article class="categoria">
+						<div class="icono" aria-hidden="true">2</div>
+						<h3>Indica la dirección</h3>
+						<p>Cuéntanos dónde se encuentra la obra y si existen restricciones de acceso.</p>
+					</article>
+					<article class="categoria">
+						<div class="icono" aria-hidden="true">3</div>
+						<h3>Confirmamos la entrega</h3>
+						<p>Te informamos disponibilidad, costo y horario antes de preparar el despacho.</p>
+					</article>
+					<article class="categoria">
+						<div class="icono" aria-hidden="true">4</div>
+						<h3>Recibe o retira</h3>
+						<p>Coordinamos contigo la entrega en obra o el retiro en tienda.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section aria-labelledby="titulo-condiciones">
+			<div class="contenedor">
+				<div class="bloque-contratistas">
+					<div>
+						<h2 id="titulo-condiciones">¿Tienes una obra en marcha?</h2>
+						<p>Para compras grandes podemos coordinar entregas por etapas y despachos directos a la dirección de tu proyecto.</p>
+						<ul class="lista-beneficios">
+							<li>Revisión de acceso para camiones y descarga</li>
+							<li>Coordinación de horarios con el responsable de la obra</li>
+							<li>Atención preferente para contratistas registrados</li>
+						</ul>
+					</div>
+					<div class="tarjeta-simulador">
+						<h3>Solicita una cotización</h3>
+						<p>Cuéntanos qué necesitas y te ayudaremos a coordinar la mejor alternativa.</p>
+						<a class="btn btn-primario btn-ancho" href="contacto.html">Contactar ahora</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="pie-sitio">
+		<div class="contenedor pie-interior">
+			<div>
+				<h4>Ferreteria Los Maestros</h4>
+				<p>Materiales de construccion, herramientas y gasfiteria para particulares y contratistas.</p>
+			</div>
+			<div>
+				<h4>Navegacion</h4>
+				<ul>
+					<li><a href="catalogo.html">Catalogo</a></li>
+					<li><a href="contratistas.html">Contratistas</a></li>
+					<li><a href="despacho.html">Despacho</a></li>
+				</ul>
+			</div>
+			<div>
+				<h4>Contacto</h4>
+				<ul>
+					<li><a href="contacto.html">Escribenos</a></li>
+				</ul>
+			</div>
+		</div>
+		<p class="pie-legal">Proyecto academico · Desarrollo FullStack II</p>
+	</footer>
+
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/menu.js"></script>
+	<script src="assets/js/sesion.js"></script>
+</body>
+</html>

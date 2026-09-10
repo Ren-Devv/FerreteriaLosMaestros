@@ -162,7 +162,8 @@ nav.menu-principal.abierto { display: block; }
  
 @media (min-width: 62rem) {
   .boton-menu { display: none; }
-  nav.menu-principal {
+  nav.menu-principal,
+  nav.menu-principal.abierto {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -188,6 +189,11 @@ nav.menu-principal.abierto { display: block; }
   cursor: pointer;
   white-space: nowrap;
 }
+/* .btn fija "display", así que sin esto el atributo hidden no tiene
+   efecto en botones/enlaces con esta clase (pasa con Mi cuenta,
+   Iniciar sesión, Crear cuenta, Cuenta corriente y Cerrar sesión en el
+   header cuando sesion.js los oculta o los muestra). */
+.btn[hidden] { display: none; }
 .btn-primario { color: #000; background: var(--color-naranja); }
 .btn-primario:hover { background: var(--color-naranja-oscuro); }
 .btn-secundario { color: #fff; background: transparent; border: 1px solid #3A4560; }
@@ -744,4 +750,164 @@ main section + section { border-top: 1px solid var(--color-borde); }
   font-size: 0.9rem;
   color: var(--color-texto-suave);
   text-align: center;
+}
+/* ============================================
+   Encabezado de página (catálogo, contratistas, etc.)
+   ============================================ */
+.encabezado-catalogo {
+  padding-block: 2.5rem 2rem;
+  color: #fff;
+  background: var(--color-grafito-oscuro);
+  border-bottom: 3px solid var(--color-naranja);
+}
+.encabezado-catalogo h1 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+.encabezado-catalogo p {
+  margin-top: 0.6rem;
+  max-width: 50ch;
+  color: #D6D9DB;
+}
+
+/* ============================================
+   Directorio de contratistas
+   ============================================ */
+.lista-contratistas {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 40rem) {
+  .lista-contratistas { grid-template-columns: repeat(2, 1fr); }
+}
+
+.contratista {
+  padding: 1.25rem 1.4rem;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+.contratista-cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+.contratista-cabecera h3 {
+  font-size: 1.05rem;
+  font-family: var(--fuente-base);
+  font-weight: 700;
+}
+
+.contratista-especialidad {
+  padding: 0.25rem 0.6rem;
+  color: #000;
+  background: var(--color-naranja);
+  border-radius: var(--radio);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.contratista address {
+  font-style: normal;
+}
+.contratista address p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+}
+.contratista address a {
+  color: var(--color-texto);
+  text-decoration: none;
+}
+.contratista address a:hover {
+  color: var(--color-naranja-oscuro);
+  text-decoration: underline;
+}
+
+.sin-resultados {
+  grid-column: 1 / -1;
+  padding: 2rem 1rem;
+  color: var(--color-texto-suave);
+  text-align: center;
+}
+
+/* ============================================
+   Mi perfil
+   ============================================ */
+.tarjeta-perfil {
+  max-width: 40rem;
+  padding: 1.75rem;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+#perfil-sin-sesion.tarjeta-perfil {
+  text-align: center;
+}
+#perfil-sin-sesion p { margin: 0 0 1rem; color: var(--color-texto-suave); }
+.perfil-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.perfil-encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+.perfil-encabezado h2 { font-size: 1.4rem; }
+
+.perfil-badge {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  color: #000;
+  background: var(--color-naranja);
+  border-radius: var(--radio);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.perfil-lista-datos {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 40rem) {
+  .perfil-lista-datos { grid-template-columns: repeat(2, 1fr); }
+}
+
+.perfil-etiqueta {
+  display: block;
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--color-texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.perfil-valor {
+  display: block;
+  margin: 0.2rem 0 0;
+  font-size: 0.98rem;
 }

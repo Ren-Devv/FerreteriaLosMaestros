@@ -30,10 +30,15 @@
               Categorias
             </button>
             <ul class="submenu" id="submenu-categorias">
+              <li><a href="catalogo.html?cat=construccion">Materiales de Construcción</a></li>
+              <li><a href="catalogo.html?cat=pinturas">Pinturas y Recubrimientos</a></li>
               <li><a href="catalogo.html?cat=herramientas">Herramientas</a></li>
-              <li><a href="catalogo.html?cat=construccion">Construccion</a></li>
-              <li><a href="catalogo.html?cat=gasfiteria">Gasfiteria</a></li>
+              <li><a href="catalogo.html?cat=gasfiteria">Gasfitería</a></li>
               <li><a href="catalogo.html?cat=electricidad">Electricidad</a></li>
+              <li><a href="catalogo.html?cat=tornilleria">Tornillería y Fijaciones</a></li>
+              <li><a href="catalogo.html?cat=madera">Madera y Tableros</a></li>
+              <li><a href="catalogo.html?cat=seguridad">Seguridad y EPP</a></li>
+              <li><a href="catalogo.html?cat=jardin">Jardín y Exterior</a></li>
             </ul>
           </li>
           <li><a href="catalogo.html">Catalogo</a></li>
@@ -42,8 +47,11 @@
           <li><a href="contacto.html" aria-current="page">Contacto</a></li>
         </ul>
         <div class="acciones-cliente">
-          <a class="btn btn-secundario" href="cuenta.html">Mi cuenta</a>
-          <a class="btn btn-primario" href="cuenta-corriente.html">Cuenta corriente</a>
+          <a class="btn btn-secundario" href="perfil.html" id="enlace-mi-cuenta">Mi cuenta</a>
+          <a class="btn btn-secundario" href="login.html" id="enlace-iniciar-sesion">Iniciar sesión</a>
+          <a class="btn btn-primario" href="registro.html" id="enlace-crear-cuenta">Crear cuenta</a>
+          <a class="btn btn-primario" href="cuenta-corriente.html" id="enlace-cuenta-corriente">Cuenta corriente</a>
+          <button class="btn btn-secundario" id="boton-cerrar-sesion-header" type="button" hidden>Cerrar sesión</button>
         </div>
       </nav>
     </div>
@@ -81,10 +89,15 @@
             <label for="categoria-interes">Categoría de interés</label>
             <select id="categoria-interes" name="categoria_interes" required>
               <option value="">Selecciona una categoría</option>
+              <option value="construccion">Materiales de Construcción</option>
+              <option value="pinturas">Pinturas y Recubrimientos</option>
               <option value="herramientas">Herramientas</option>
-              <option value="construccion">Construccion</option>
-              <option value="gasfiteria">Gasfiteria</option>
+              <option value="gasfiteria">Gasfitería</option>
               <option value="electricidad">Electricidad</option>
+              <option value="tornilleria">Tornillería y Fijaciones</option>
+              <option value="madera">Madera y Tableros</option>
+              <option value="seguridad">Seguridad y EPP</option>
+              <option value="jardin">Jardín y Exterior</option>
               <option value="otro">Otro / no estoy seguro</option>
             </select>
 
@@ -135,8 +148,7 @@
   </footer>
 
   <script src="assets/js/app.js"></script>
-  <script src="assets/js/productos.js"></script>
-  <script src="assets/js/carrito.js"></script>
-  <script src="assets/js/catalogo.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/sesion.js"></script>
 </body>
 </html>

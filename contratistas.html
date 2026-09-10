@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bienvenido a Ferreteria Los Maestros">
-  <title>Inicio | Ferreteria Los Maestros</title>
+  <meta name="description" content="Directorio de contratistas independientes que trabajan con Ferreteria Los Maestros">
+  <title>Contratistas | Ferreteria Los Maestros</title>
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
 
   <header class="encabezado">
-  <header class="encabezado">
     <div class="contenedor">
-      <div class="encabezado-superior">
       <div class="encabezado-superior">
         <a class="marca" href="index.html">
           <strong>Ferreteria Los Maestros</strong>
@@ -26,7 +24,7 @@
 
       <nav class="menu-principal" id="menu-principal" aria-label="Navegacion principal">
         <ul class="menu">
-          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="index.html">Inicio</a></li>
           <li class="menu-item-desplegable">
             <button class="menu-desplegable-boton" type="button" id="boton-categorias" aria-expanded="false" aria-controls="submenu-categorias">
               Categorias
@@ -44,7 +42,7 @@
             </ul>
           </li>
           <li><a href="catalogo.html">Catalogo</a></li>
-          <li><a href="contratistas.html">Contratistas</a></li>
+          <li><a href="contratistas.html" aria-current="page">Contratistas</a></li>
           <li><a href="despacho.html">Despacho</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
@@ -61,75 +59,91 @@
 
   <main id="contenido-principal">
 
-    <section class="hero" aria-labelledby="hero-titulo">
-      <div class="contenedor hero-interior">
-        <div>
-          <p class="hero-etiqueta">Retiro en tienda o despacho a obra</p>
-          <h1 id="hero-titulo">Todo lo que necesita tu proyecto, en un solo lugar</h1>
-          <p>Materiales de construccion, herramientas y gasfiteria para particulares y contratistas, con cuenta corriente y despacho dentro de la comuna.</p>
-          <div class="hero-acciones">
-            <a class="btn btn-primario" href="catalogo.html">Ver catalogo</a>
-            <a class="btn btn-secundario" href="contratistas.html">Soy contratista</a>
-          </div>
-        </div>
-        <dl class="hero-datos">
-          <div>
-            <dt>+800</dt>
-            <dd>referencias en stock</dd>
-          </div>
-          <div>
-            <dt>24h</dt>
-            <dd>despacho en zona de cobertura</dd>
-          </div>
-          <div>
-            <dt>30 dias</dt>
-            <dd>cuenta corriente para contratistas</dd>
-          </div>
-        </dl>
+    <section class="encabezado-catalogo">
+      <div class="contenedor">
+        <h1>Contratistas asociados</h1>
+        <p>Maestros independientes que trabajan habitualmente con Ferretería Los Maestros. Contáctalos directamente para cotizar tu proyecto.</p>
       </div>
     </section>
 
-    <section aria-labelledby="titulo-productos">
+    <section aria-labelledby="titulo-directorio">
       <div class="contenedor">
         <div class="encabezado-seccion">
-          <h2 id="titulo-productos">Productos destacados</h2>
-          <p>Los mas solicitados por particulares y contratistas esta semana.</p>
+          <h2 id="titulo-directorio">Directorio</h2>
+          <p>Selección de contratistas por especialidad. El listado se irá ampliando con el tiempo.</p>
         </div>
-        <div class="grilla-productos">
-          <article class="producto">
-            <div class="producto-imagen"><img src="assets/img/productos/taladro-percutor-650w.jpg" alt="Taladro percutor 650W"></div>
-            <div class="producto-cuerpo">
-              <p class="producto-categoria">Herramientas</p>
-              <h3>Taladro percutor 650W</h3>
-              <div class="producto-precio-fila">
-                <span class="producto-precio">$34.990</span>
-                <span class="producto-stock">Stock disponible</span>
+
+        <ul class="lista-contratistas">
+          <li>
+            <article class="contratista">
+              <div class="contratista-cabecera">
+                <h3>Roberto Sánchez</h3>
+                <span class="contratista-especialidad">Electricista</span>
               </div>
-            </div>
-          </article>
-          <article class="producto">
-            <div class="producto-imagen"><img src="assets/img/productos/cemento-gris-25kg.jpg" alt="Cemento gris 25kg"></div>
-            <div class="producto-cuerpo">
-              <p class="producto-categoria">Construccion</p>
-              <h3>Cemento gris 25kg</h3>
-              <div class="producto-precio-fila">
-                <span class="producto-precio">$6.490</span>
-                <span class="producto-stock">Stock disponible</span>
+              <address>
+                <p>Av. Vicuña Mackenna 4820, La Florida</p>
+                <p><a href="tel:+56981234567">+56 9 8123 4567</a></p>
+                <p><a href="mailto:r.sanchez.elec@gmail.com">r.sanchez.elec@gmail.com</a></p>
+              </address>
+            </article>
+          </li>
+
+          <li>
+            <article class="contratista">
+              <div class="contratista-cabecera">
+                <h3>Marcela Torres</h3>
+                <span class="contratista-especialidad">Gasfíter</span>
               </div>
-            </div>
-          </article>
-          <article class="producto">
-            <div class="producto-imagen"><img src="assets/img/productos/tubo-pvc-110mm.jpg" alt="Tubo PVC 110mm x 3m"></div>
-            <div class="producto-cuerpo">
-              <p class="producto-categoria">Gasfiteria</p>
-              <h3>Tubo PVC 110mm x 3m</h3>
-              <div class="producto-precio-fila">
-                <span class="producto-precio">$8.990</span>
-                <span class="producto-stock">ultimas unidades</span>
+              <address>
+                <p>Los Aromos 231, Puente Alto</p>
+                <p><a href="tel:+56976543210">+56 9 7654 3210</a></p>
+                <p><a href="mailto:mtorres.gasfiteria@gmail.com">mtorres.gasfiteria@gmail.com</a></p>
+              </address>
+            </article>
+          </li>
+
+          <li>
+            <article class="contratista">
+              <div class="contratista-cabecera">
+                <h3>Luis Fuentes</h3>
+                <span class="contratista-especialidad">Maestro albañil</span>
               </div>
-            </div>
-          </article>
-        </div>
+              <address>
+                <p>Pasaje Las Rosas 88, San Bernardo</p>
+                <p><a href="tel:+56965432109">+56 9 6543 2109</a></p>
+                <p><a href="mailto:luisfuentes.obras@gmail.com">luisfuentes.obras@gmail.com</a></p>
+              </address>
+            </article>
+          </li>
+
+          <li>
+            <article class="contratista">
+              <div class="contratista-cabecera">
+                <h3>Daniela Reyes</h3>
+                <span class="contratista-especialidad">Pintora</span>
+              </div>
+              <address>
+                <p>Los Álamos 1450, La Cisterna</p>
+                <p><a href="tel:+56954321098">+56 9 5432 1098</a></p>
+                <p><a href="mailto:daniela.pinturas@gmail.com">daniela.pinturas@gmail.com</a></p>
+              </address>
+            </article>
+          </li>
+
+          <li>
+            <article class="contratista">
+              <div class="contratista-cabecera">
+                <h3>Jorge Salinas</h3>
+                <span class="contratista-especialidad">Carpintero</span>
+              </div>
+              <address>
+                <p>Camino El Guanaco 320, Peñalolén</p>
+                <p><a href="tel:+56943210987">+56 9 4321 0987</a></p>
+                <p><a href="mailto:jsalinas.carpinteria@gmail.com">jsalinas.carpinteria@gmail.com</a></p>
+              </address>
+            </article>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -184,8 +198,5 @@
   <script src="assets/js/app.js"></script>
   <script src="assets/js/menu.js"></script>
   <script src="assets/js/sesion.js"></script>
-  <script src="assets/js/productos.js"></script>
-  <script src="assets/js/carrito.js"></script>
-  <script src="assets/js/catalogo.js"></script>
 </body>
 </html>

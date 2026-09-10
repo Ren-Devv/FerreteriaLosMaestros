@@ -1,0 +1,19 @@
+{
+  "empleados": [
+    {
+      "nombre": "Admin",
+      "apellidos": "Sistema",
+      "correo": "admin@profesor.duoc.cl",
+      "password": "admin1234",
+      "rol": "Administrador"
+    },
+    {
+      "nombre": "Vendedor",
+      "apellidos": "Sistema",
+      "correo": "vendedor@duoc.cl",
+      "password": "vend1234",
+      "rol": "Vendedor"
+    }
+  ],
+  "clientes": []
+}

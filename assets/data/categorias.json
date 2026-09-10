@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "construccion",
+    "label": "Materiales de Construcción"
+  },
+  {
+    "slug": "pinturas",
+    "label": "Pinturas y Recubrimientos"
+  },
+  {
+    "slug": "herramientas",
+    "label": "Herramientas"
+  },
+  {
+    "slug": "gasfiteria",
+    "label": "Gasfitería"
+  },
+  {
+    "slug": "electricidad",
+    "label": "Electricidad"
+  },
+  {
+    "slug": "tornilleria",
+    "label": "Tornillería y Fijaciones"
+  },
+  {
+    "slug": "madera",
+    "label": "Madera y Tableros"
+  },
+  {
+    "slug": "seguridad",
+    "label": "Seguridad y EPP"
+  },
+  {
+    "slug": "jardin",
+    "label": "Jardín y Exterior"
+  }
+]

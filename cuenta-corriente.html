@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solicita cuenta corriente para contratistas en Ferreteria Los Maestros">
+  <title>Cuenta corriente | Ferreteria Los Maestros</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+ 
+  <header class="encabezado">
+    <div class="contenedor">
+      <div class="encabezado-superior">
+        <a class="marca" href="index.html">
+          <strong>Ferreteria Los Maestros</strong>
+          <span>Materiales - herramientas - despacho a obra</span>
+        </a>
+        <button class="boton-menu" id="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir o cerrar menú principal">
+          Menu
+        </button>
+      </div>
+ 
+      <nav class="menu-principal" id="menu-principal" aria-label="Navegacion principal">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="menu-item-desplegable">
+            <button class="menu-desplegable-boton" type="button" id="boton-categorias" aria-expanded="false" aria-controls="submenu-categorias">
+              Categorias
+            </button>
+            <ul class="submenu" id="submenu-categorias">
+              <li><a href="catalogo.html?cat=construccion">Materiales de Construcción</a></li>
+              <li><a href="catalogo.html?cat=pinturas">Pinturas y Recubrimientos</a></li>
+              <li><a href="catalogo.html?cat=herramientas">Herramientas</a></li>
+              <li><a href="catalogo.html?cat=gasfiteria">Gasfitería</a></li>
+              <li><a href="catalogo.html?cat=electricidad">Electricidad</a></li>
+              <li><a href="catalogo.html?cat=tornilleria">Tornillería y Fijaciones</a></li>
+              <li><a href="catalogo.html?cat=madera">Madera y Tableros</a></li>
+              <li><a href="catalogo.html?cat=seguridad">Seguridad y EPP</a></li>
+              <li><a href="catalogo.html?cat=jardin">Jardín y Exterior</a></li>
+            </ul>
+          </li>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="contratistas.html">Contratistas</a></li>
+          <li><a href="despacho.html">Despacho</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div class="acciones-cliente">
+          <a class="btn btn-secundario" href="perfil.html" id="enlace-mi-cuenta">Mi cuenta</a>
+          <a class="btn btn-secundario" href="login.html" id="enlace-iniciar-sesion">Iniciar sesión</a>
+          <a class="btn btn-primario" href="registro.html" id="enlace-crear-cuenta">Crear cuenta</a>
+          <a class="btn btn-primario" href="cuenta-corriente.html" id="enlace-cuenta-corriente" aria-current="page">Cuenta corriente</a>
+          <button class="btn btn-secundario" id="boton-cerrar-sesion-header" type="button" hidden>Cerrar sesión</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+ 
+  <main id="contenido-principal">
+ 
+    <section class="encabezado-catalogo">
+      <div class="contenedor">
+        <h1>Cuenta corriente para contratistas</h1>
+        <p>Compra durante el mes y paga en un solo corte, sin perder el ritmo de la obra.</p>
+      </div>
+    </section>
+ 
+    <section aria-labelledby="titulo-beneficios">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <h2 id="titulo-beneficios">Beneficios de la cuenta corriente</h2>
+        </div>
+        <ul class="lista-beneficios">
+          <li>Cierre mensual con historial de movimientos en linea.</li>
+          <li>Despacho directo a la direccion de la obra.</li>
+          <li>Atencion prioritaria en meson y en horarios de despacho.</li>
+          <li>Sin intereses si pagas dentro del plazo del corte mensual.</li>
+        </ul>
+      </div>
+    </section>
+ 
+    <section aria-labelledby="titulo-solicitud">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <h2 id="titulo-solicitud">Solicitar evaluación</h2>
+          <p>Completa tus datos y te contactaremos para confirmar el cupo de tu cuenta corriente.</p>
+        </div>
+ 
+        <form id="form-cuenta-corriente" class="formulario" novalidate>
+          <fieldset>
+            <legend>Datos del contratista o empresa</legend>
+ 
+            <label for="nombre-empresa">Nombre de la empresa o contratista</label>
+            <input type="text" id="nombre-empresa" name="nombre-empresa" maxlength="100" aria-describedby="error-nombre-empresa">
+            <small id="error-nombre-empresa" class="mensaje-error" role="alert"></small>
+ 
+            <label for="rut-empresa">RUT (empresa o persona)</label>
+            <input type="text" id="rut-empresa" name="rut-empresa" placeholder="Ej: 12345678K (sin puntos ni guion)" maxlength="9" autocomplete="off" aria-describedby="error-rut-empresa">
+            <small id="error-rut-empresa" class="mensaje-error" role="alert"></small>
+ 
+            <label for="correo-empresa">Correo electrónico</label>
+            <input type="email" id="correo-empresa" name="correo-empresa" maxlength="100" placeholder="tunombre@duoc.cl" aria-describedby="error-correo-empresa">
+            <small id="error-correo-empresa" class="mensaje-error" role="alert"></small>
+ 
+            <label for="telefono-empresa">Teléfono chileno</label>
+            <input type="tel" id="telefono-empresa" name="telefono-empresa" placeholder="912345678" aria-describedby="error-telefono-empresa">
+            <small id="error-telefono-empresa" class="mensaje-error" role="alert"></small>
+          </fieldset>
+ 
+          <fieldset>
+            <legend>Detalle de la solicitud</legend>
+ 
+            <label for="monto-mensual">Compra mensual estimada</label>
+            <select id="monto-mensual" name="monto-mensual" aria-describedby="error-monto-mensual">
+              <option value="">Selecciona un rango</option>
+              <option value="menos-300000">Menos de $300.000</option>
+              <option value="300000-800000">$300.000 - $800.000</option>
+              <option value="800000-2000000">$800.000 - $2.000.000</option>
+              <option value="mas-2000000">Más de $2.000.000</option>
+            </select>
+            <small id="error-monto-mensual" class="mensaje-error" role="alert"></small>
+ 
+            <label for="mensaje-cuenta-corriente">Cuéntanos sobre tu obra o proyecto <span class="opcional">(opcional)</span></label>
+            <textarea id="mensaje-cuenta-corriente" name="mensaje-cuenta-corriente" rows="4" maxlength="500" aria-describedby="error-mensaje-cuenta-corriente"></textarea>
+            <small id="error-mensaje-cuenta-corriente" class="mensaje-error" role="alert"></small>
+          </fieldset>
+ 
+          <label>
+            <input type="checkbox" name="acepta-condiciones" id="acepta-condiciones" required>
+            Confirmo que los datos son de prueba y acepto las condiciones.
+          </label>
+ 
+          <button type="submit" class="btn btn-primario">Solicitar evaluación</button>
+ 
+          <p id="cuenta-corriente-confirmacion" class="mensaje-confirmacion" hidden role="status">
+            ¡Solicitud enviada! Te contactaremos dentro de los próximos 2 días hábiles.
+          </p>
+        </form>
+      </div>
+    </section>
+ 
+  </main>
+ 
+  <footer class="pie-sitio">
+    <div class="contenedor pie-interior">
+      <div>
+        <h4>Ferreteria Los Maestros</h4>
+        <p>Materiales de construccion, herramientas y gasfiteria para particulares y contratistas.</p>
+      </div>
+      <div>
+        <h4>Navegacion</h4>
+        <ul>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="contratistas.html">Contratistas</a></li>
+          <li><a href="despacho.html">Despacho</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="contacto.html">Escribenos</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pie-legal">Proyecto academico · Desarrollo FullStack II</p>
+  </footer>
+ 
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/sesion.js"></script>
+  <script src="assets/js/cuenta-corriente.js"></script>
+</body>
+</html>
