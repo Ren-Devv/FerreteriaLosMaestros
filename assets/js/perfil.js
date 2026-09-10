@@ -13,7 +13,7 @@ const ETIQUETAS_REGION_COMUNA = {
   contratista: "Contratista"
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const vistaSinSesion = document.getElementById("perfil-sin-sesion");
   const vistaConSesion = document.getElementById("perfil-con-sesion");
   const botonCerrarSesion = document.getElementById("boton-cerrar-sesion");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  const registro = buscarRegistro(sesion);
+  const registro = await buscarRegistro(sesion);
 
   if (!registro) {
     // La sesión apunta a un correo que ya no existe en los datos guardados
@@ -38,9 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mostrarPerfil(sesion, registro);
 
-  function buscarRegistro(sesion) {
-    const clave = sesion.tipo === "empleado" ? "empleados" : "clientes";
-    const lista = JSON.parse(localStorage.getItem(clave) || "[]");
+  async function buscarRegistro(sesion) {
+    const lista = sesion.tipo === "empleado" ? await obtenerEmpleados() : await obtenerClientes();
     return lista.find((r) => r.correo.toLowerCase() === sesion.correo.toLowerCase()) || null;
   }
 

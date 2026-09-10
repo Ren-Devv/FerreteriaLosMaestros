@@ -46,7 +46,13 @@
           <li><a href="despacho.html">Despacho</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
-        
+        <div class="acciones-cliente">
+          <a class="btn btn-secundario" href="perfil.html" id="enlace-mi-cuenta" aria-current="page">Mi cuenta</a>
+          <a class="btn btn-secundario" href="login.html" id="enlace-iniciar-sesion">Iniciar sesión</a>
+          <a class="btn btn-primario" href="registro.html" id="enlace-crear-cuenta">Crear cuenta</a>
+          <a class="btn btn-primario" href="cuenta-corriente.html" id="enlace-cuenta-corriente">Cuenta corriente</a>
+          <button class="btn btn-secundario" id="boton-cerrar-sesion-header" type="button" hidden>Cerrar sesión</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -63,7 +69,7 @@
         <p>Aún no has iniciado sesión.</p>
         <div class="perfil-acciones">
           <a class="btn btn-primario" href="login.html">Iniciar sesión</a>
-          <a class="btn btn-primario" href="registro.html">Registrarse</a>
+          <a class="btn btn-primario" href="registro.html">Crear cuenta</a>
         </div>
       </div>
 
@@ -74,7 +80,7 @@
             <h2 id="perfil-nombre"></h2>
             <span id="perfil-rol" class="perfil-badge"></span>
           </div>
-          <button id="boton-cerrar-sesion" class="btn btn-secundario" type="button">Cerrar sesión</button>
+          <button id="boton-cerrar-sesion" class="btn btn-primario" type="button">Cerrar sesión</button>
         </div>
 
         <dl id="perfil-lista-datos" class="perfil-lista-datos"></dl>
@@ -108,6 +114,8 @@
 
   <script src="assets/js/app.js"></script>
   <script src="assets/js/menu.js"></script>
+  <script src="assets/js/sesion.js"></script>
+  <script src="assets/js/usuarios.js"></script>
   <script src="assets/js/perfil.js"></script>
 </body>
 </html>
